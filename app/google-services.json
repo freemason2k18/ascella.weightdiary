@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "296421736040",
+    "firebase_url": "https://comascellappweightdiary.firebaseio.com",
+    "project_id": "comascellappweightdiary",
+    "storage_bucket": "comascellappweightdiary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296421736040:android:a2875db62283becb",
+        "android_client_info": {
+          "package_name": "com.ascellapp.weightdiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296421736040-dsrk8rp0ldd17ehq828lf4tb2j4nj1cs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ascellapp.weightdiary",
+            "certificate_hash": "d6202becfbd973339cdbe2705bcf01ab814c4e8e"
+          }
+        },
+        {
+          "client_id": "296421736040-b0ljhhmvjd3ggso2rdsae19hsmbefomj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9rceYvl2flo-090Wzrb_lfm5qZ-Nu67A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296421736040-b0ljhhmvjd3ggso2rdsae19hsmbefomj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
