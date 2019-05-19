@@ -65,10 +65,11 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_home -> {
-                // Handle the camera action
+            R.id.nav_profile_layout -> {
+                loadFirst(frag1 = ProfileFragment())
             }
-            R.id.nav_gallery -> {
+            R.id.nav_bmi_calculator_layout -> {
+                loadSecond(frag2 = bmicalculatorFragment())
 
             }
             R.id.nav_slideshow -> {
@@ -87,5 +88,15 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
+    }
+    private fun loadFirst(frag1: ProfileFragment) {
+        val fm = supportFragmentManager.beginTransaction()
+        fm.replace(R.id.frameLayout, frag1)
+        fm.commit()
+    }
+    private fun loadSecond(frag2: bmicalculatorFragment) {
+        val fm = supportFragmentManager.beginTransaction()
+        fm.replace(R.id.frameLayout, frag2)
+        fm.commit()
     }
 }
