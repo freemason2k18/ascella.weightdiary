@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:hint="@string/cm_kg"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_marginTop="10dp"
             android:textStyle="italic"
             android:textColor="@android:color/black"/>
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/calculator"/>
+            app:srcCompat="@drawable/calculator" android:contentDescription="TODO" android:id="@+id/calculator1"/>
 
 
 
@@ -36,12 +36,12 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:hint="@string/height" android:autofillHints=""/>
+            android:hint="@string/height" android:autofillHints="" android:inputType=""/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:hint="@string/weight"/>
+            android:hint="@string/weight" android:inputType="" android:autofillHints=""/>
 
     <Button
             android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
     <TextView android:layout_width="wrap_content"
               android:layout_height="40dp"
               android:layout_marginTop="20dp"
-              android:hint="RESULT"/>
+              android:hint="@string/result"/>
 
 
 </LinearLayout>
