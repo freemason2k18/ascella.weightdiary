@@ -1,4 +1,4 @@
-package com.ascellapp.weightdiary
+package com.ascellapp.weightdiary.Navigation
 
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -11,6 +11,10 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import androidx.fragment.app.FragmentTransaction
+import com.ascellapp.weightdiary.BMIcalculator.bmicalculator
+import com.ascellapp.weightdiary.Profile.ProfileActivity
+import com.ascellapp.weightdiary.R
 
 class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -29,7 +33,9 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+            this, drawerLayout, toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -66,18 +72,13 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_profile_layout -> {
-                loadFirst(frag1 = ProfileFragment())
+                loadFirst(frag1 = ProfileActivity())
             }
             R.id.nav_bmi_calculator_layout -> {
-                loadSecond(frag2 = bmicalculatorFragment())
+                loadSecond(frag2 = bmicalculator())
 
             }
-            R.id.nav_slideshow -> {
 
-            }
-            R.id.nav_tools -> {
-
-            }
             R.id.nav_share -> {
 
             }
@@ -89,14 +90,22 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
-    private fun loadFirst(frag1: ProfileFragment) {
+    private fun loadFirst(frag1: ProfileActivity) {
         val fm = supportFragmentManager.beginTransaction()
         fm.replace(R.id.frameLayout, frag1)
         fm.commit()
     }
-    private fun loadSecond(frag2: bmicalculatorFragment) {
+    private fun loadSecond(frag2: bmicalculator) {
         val fm = supportFragmentManager.beginTransaction()
         fm.replace(R.id.frameLayout, frag2)
         fm.commit()
     }
+}
+
+private fun FragmentTransaction.replace(frameLayout: Int, frag2: bmicalculator) {
+    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+}
+
+private fun FragmentTransaction.replace(layout: Int, frag1: ProfileActivity) {
+    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 }
