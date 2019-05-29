@@ -1,8 +1,10 @@
-package com.ascellapp.weightdiary
+package com.ascellapp.weightdiary.SplashScreen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ascellapp.weightdiary.MainActivity
+import com.ascellapp.weightdiary.R
 
 class SplashScreenActivity : AppCompatActivity() {
 

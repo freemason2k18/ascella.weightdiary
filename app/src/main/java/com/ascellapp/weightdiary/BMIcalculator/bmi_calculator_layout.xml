@@ -31,28 +31,32 @@
             app:srcCompat="@drawable/calculator"/>
 
 
-
     <EditText
+            android:id="@+id/input_height"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:hint="@string/height" android:autofillHints=""/>
+            android:hint="@string/height"/>
     <EditText
+            android:id="@+id/input_weight"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:hint="@string/weight"/>
 
     <Button
+            android:id="@+id/btn_calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/calculate"/>
 
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="40dp"
-              android:layout_marginTop="20dp"
-              android:hint="RESULT"/>
+    <TextView
+            android:id="@+id/text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:hint="RESULT"/>
 
 
 </LinearLayout>
