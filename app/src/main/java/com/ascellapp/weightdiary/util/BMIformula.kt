@@ -1,4 +1,4 @@
-package com.ascellapp.weightdiary.BMIcalculator
+package com.ascellapp.weightdiary.util
 
 fun bodyMassIndex() {
 
