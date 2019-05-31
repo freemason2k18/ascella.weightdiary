@@ -6,7 +6,7 @@ class BMI_presenter {
         val w = weight.toString().toFloat()
         val h = height.toString().toFloat()
 
-        val bmi = BMIFormula().getBodyMassIndex(w, h) // weight / (height * height)
+        val bmi = BMIformula().getBodyMassIndex(w, h) // weight / (height * height)
 
         view.showBMI(bmi)
 
@@ -19,5 +19,5 @@ class BMI_presenter {
         }
 
     }
-}
+
 

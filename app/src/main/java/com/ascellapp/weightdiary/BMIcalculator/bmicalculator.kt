@@ -6,13 +6,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.ascellapp.weightdiary.BMIcalculator.BMI_view
-import com.ascellapp.weightdiary.util.BMIFormula
+import com.ascellapp.weightdiary.util.BMIformula
 
 class bmicaluclator : AppCompatActivity(), BMI_view {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.bmi_calculator_layout)
 
         val heightInput: EditText = findViewById(R.id.input_height)
         val weightInput: EditText = findViewById(R.id.input_weight)
@@ -33,7 +33,7 @@ class bmicaluclator : AppCompatActivity(), BMI_view {
             val height = heightInput.text.toString().toFloat()
             val weight = weightInput.text.toString().toFloat()
 
-            val bmi = BMIFormula().getBodyMassIndex(weight, height) // weight / (height * height)
+            val bmi = BMIformula().getBodyMassIndex(weight, height) // weight / (height * height)
 
             resultText.text = bmi.toString()
         }
@@ -54,7 +54,7 @@ class bmicaluclator : AppCompatActivity(), BMI_view {
         val w = weight.toString().toFloat()
         val h = height.toString().toFloat()
 
-        val bmi = BMIFormula().getBodyMassIndex(w, h) // weight / (height * height)
+        val bmi = BMIformula().getBodyMassIndex(w, h) // weight / (height * height)
 
         view.showBMI(bmi)
 
